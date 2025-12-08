@@ -1,65 +1,58 @@
-import Image from "next/image";
+import React from "react";
+import Works from "@/component/works/Works";
+import About from "@/component/about/About";
+import Contact from "../component/contact/Contact";
 
-export default function Home() {
+export default function TopPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <section>
+        <Works
+          title="WORKS"
+          isSwiper={true}
+          items={[
+            {
+              worksName: "都道府県ゲーム",
+              src: "/img/works01.jpg",
+              alt: "都道府県ゲームの画像",
+              href: "pref-game",
+            },
+            {
+              worksName: "sunday flower",
+              src: "/img/works02.jpg",
+              alt: "サンデーフラワーの画像",
+              href: "sunday-flower",
+            },
+            {
+              worksName: "ゴリラ物語",
+              src: "/img/works03.jpg",
+              alt: "ゴリラ物語の画像",
+              href: "gorilla-story",
+            },
+            {
+              worksName: "my-dashboard",
+              src: "/img/works04.png",
+              alt: "my-dashboardの画像",
+              href: "my-dashboard",
+            },
+            {
+              worksName: "バナー作品",
+              src: "/img/works05.png",
+              alt: "バナー作品の画像",
+              href: "banner",
+            },
+          ]}
+        ></Works>
+        <About
+          isTop={true}
+          src="/img/mp.JPG"
+          alt="プロフィール画像"
+          birthplace="岡山県"
+          motto="人間万事塞翁が馬"
+          career="高校を卒業後、就職に伴い上京。その後、役者として活動をした後に営業職に従事。数年後にフリーランスとして活動。SASS商材のBPO案件に従事している際に、ITへの知識不足と同時に魅力を感じWEB業界に転向を意識する。"
+        ></About>
+        <Contact isTop={true} />
+      </section>
+    </>
   );
 }
