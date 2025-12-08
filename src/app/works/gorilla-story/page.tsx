@@ -22,9 +22,7 @@ export default function GorillaStoryPage() {
           width={800}
           height={800}
         />
-
         <div className="max-w-4xl mx-auto">
-          {/* 概要 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-4 sm:mb-8">
               この作品の概要
@@ -36,43 +34,43 @@ export default function GorillaStoryPage() {
               「nanobanana」を使用して画像生成を行い、テキスト入力と組み合わせてストーリーを楽しめる構成にしました。
             </PText>
           </div>
-
-          {/* URL セクション */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               URL :
             </HThreeText>
             <PText>
               サイトURL：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://intp.site/2862/gorilla-story/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://intp.site/2862/gorilla-story/
               </Link>
             </PText>
             <PText>
               GitHub：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://github.com/kachiku-git/gorilla-styry"
+                target="_blank"
+                rel="noopener"
+              >
+                https://github.com/kachiku-git/gorilla-styry
               </Link>
             </PText>
           </div>
-
-          {/* 担当 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               担当
             </HThreeText>
             <PText>デザイン・コーディング</PText>
           </div>
-
-          {/* 作成期間 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               サイト作成期間
             </HThreeText>
             <PText>6時間</PText>
           </div>
-
-          {/* コーディングについて */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               コーディングについて
@@ -84,8 +82,6 @@ export default function GorillaStoryPage() {
               を使ったフォーム送信や条件分岐の基礎を押さえつつ、簡単な遊び要素を加えることで、楽しく学べる構成を意識しています。
             </PText>
           </div>
-
-          {/* こだわりポイント */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               こだわりポイント
@@ -96,8 +92,6 @@ export default function GorillaStoryPage() {
               どのデバイスから見てもストーリーの世界観が伝わるように、背景で雰囲気を支えつつ、テキストや生成画像が見やすくなるようバランスを調整しています。
             </PText>
           </div>
-
-          {/* 使用スキル */}
           <Skills
             title="使用スキル"
             items={[

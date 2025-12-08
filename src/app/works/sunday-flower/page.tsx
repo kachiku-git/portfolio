@@ -48,8 +48,12 @@ export default function sundayFlowerPage() {
             </PText>
             <PText>
               GitHub：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://github.com/kachiku-git/sunday-flower"
+                target="_blank"
+                rel="noopener"
+              >
+                https://github.com/kachiku-git/sunday-flower
               </Link>
             </PText>
           </div>

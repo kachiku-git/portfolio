@@ -6,46 +6,44 @@ import Skills from "@/component/skills/Skills";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/component/button/Button";
-import { SP } from "next/dist/shared/lib/utils";
 
-export default function GorillaStoryPage() {
+export default function BannerPage() {
   return (
     <article>
       <div className="p-4 sm:p-8">
         <HTwoText className="mb-8 pb-2 sm:pb-4 sm:mb-16 border-b-3 border-black dark:border-white">
-          ゴリラ物語
+          バナー制作
         </HTwoText>
+
         <Image
           className="mx-auto mb-8 sm:mb-16 rounded-2xl"
-          src="/img/works03.jpg"
-          alt="ゴリラ物語アプリケーションのデザイン画像"
+          src="/img/works05.png"
+          alt="バナーデザインの画像"
           width={800}
           height={800}
         />
 
         <div className="max-w-4xl mx-auto">
-          {/* 概要 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-4 sm:mb-8">
               この作品の概要
             </HThreeText>
             <PText>
-              PHP
-              の基礎的な使い方を習得するために作成した簡単なアプリケーションです。
-              <br />
-              「nanobanana」を使用して画像生成を行い、テキスト入力と組み合わせてストーリーを楽しめる構成にしました。
+              イラストレーターとフォトショップを利用してのバナーデザイン制作を行いました。
             </PText>
           </div>
-
-          {/* URL セクション */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               URL :
             </HThreeText>
             <PText>
               サイトURL：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://intp.site/2862/bnr/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://intp.site/2862/bnr/
               </Link>
             </PText>
             <PText>
@@ -69,31 +67,32 @@ export default function GorillaStoryPage() {
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               サイト作成期間
             </HThreeText>
-            <PText>6時間</PText>
+            <PText>1日</PText>
           </div>
 
-          {/* コーディングについて */}
+          {/* デザインについて */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
-              コーディングについて
+              デザインについて
             </HThreeText>
             <PText>
-              入力された内容を画面上に反映させる処理を実装し、一部の表示内容はランダムに変化するようにしました。
+              バナーの模写を通じて、イラストレーターやフォトショップの基本的な操作方法を学びました。
               <br />
-              PHP
-              を使ったフォーム送信や条件分岐の基礎を押さえつつ、簡単な遊び要素を加えることで、楽しく学べる構成を意識しています。
+              BijoudeとIQserverは授業での制作物で、他は自主模写作品になります。
+              <br />
+              模写では実際に自分で手を動かすことで、各ツールの使い方やデザインの基本原則を理解することができました。
             </PText>
           </div>
 
-          {/* こだわりポイント */}
+          {/* コーディングに関して */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
-              こだわりポイント
+              コーディングに関して
             </HThreeText>
             <PText>
-              ユーザーの画面サイズや環境によって表示領域が変わることを踏まえ、背景画像にベースとなる画像を配置しました。
+              作品ごとにタブで切り替えができるようにJavaScriptで実装を行いました。
               <br />
-              どのデバイスから見てもストーリーの世界観が伝わるように、背景で雰囲気を支えつつ、テキストや生成画像が見やすくなるようバランスを調整しています。
+              またインターセクションオブザーバーを利用して、スクロールに応じてバナーがフェードインするような動きをつけました。
             </PText>
           </div>
 
@@ -107,21 +106,32 @@ export default function GorillaStoryPage() {
                 alt: "HTML5の画像",
               },
               {
-                skillsName: "SCSS",
-                src: "/img/sass.svg",
-                alt: "sassの画像",
+                skillsName: "CSS3",
+                src: "/img/css3.svg", // プロジェクトの実ファイル名に合わせてね
+                alt: "CSS3の画像",
               },
               {
-                skillsName: "php",
-                src: "/img/php.svg",
-                alt: "phpの画像",
+                skillsName: "JavaScript",
+                src: "/img/js.svg",
+                alt: "JavaScriptの画像",
+              },
+              {
+                skillsName: "Illustrator",
+                src: "/img/illustrator.svg",
+                alt: "Illustratorの画像",
+              },
+              {
+                skillsName: "Photoshop",
+                src: "/img/photoshop.svg",
+                alt: "Photoshopの画像",
               },
             ]}
           />
         </div>
       </div>
+
       <Button>
-        <Link href="/../works/">Works一覧へ</Link>
+        <Link href="/works">Works一覧へ</Link>
       </Button>
     </article>
   );

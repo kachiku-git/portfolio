@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/header/Header";
 import Footer from "@/component/footer/Footer";
+import LoadingWrapper from "@/component/loading/LoadingWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,15 +48,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen sm:h-screen overflow-visible grid grid-cols-1 sm:grid-cols-[1fr_4fr]">
-          <aside className="sm:p-4 sm:h-screen sm:sticky sm:top-0">
-            <Header className="p-2 sm:p-0 sm:min-h-2/3 sm:border-y-3 dark:border-whiter-3 rounded-4xl" />
-          </aside>
-          <div className="flex flex-col sm:h-screen sm:overflow-y-auto">
-            <main className="flex-1">{children}</main>
-            <Footer className="my-8 sm:mt-16 " />
+        <LoadingWrapper>
+          <div className="min-h-screen sm:h-screen overflow-visible grid grid-cols-1 sm:grid-cols-[1fr_4fr]">
+            <aside className="sm:p-4 sm:h-screen sm:sticky sm:top-0">
+              <Header className="p-2 sm:p-0 sm:min-h-2/3 sm:border-y-3 dark:border-whiter-3 rounded-4xl" />
+            </aside>
+            <div className="flex flex-col sm:h-screen sm:overflow-y-auto">
+              <main className="flex-1">{children}</main>
+              <Footer className="my-8 sm:mt-16 " />
+            </div>
           </div>
-        </div>
+        </LoadingWrapper>
       </body>
     </html>
   );

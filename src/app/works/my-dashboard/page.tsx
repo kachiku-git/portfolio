@@ -42,14 +42,22 @@ export default function MyDashboardPage() {
             </HThreeText>
             <PText>
               サイトURL：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://intp.site/2862/my-Dashboard/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://intp.site/2862/my-Dashboard/
               </Link>
             </PText>
             <PText>
               GitHub：
-              <Link href="#" target="_blank" rel="noopener">
-                #
+              <Link
+                href="https://github.com/kachiku-git/my-dashboard"
+                target="_blank"
+                rel="noopener"
+              >
+                https://github.com/kachiku-git/my-dashboard
               </Link>
             </PText>
           </div>
