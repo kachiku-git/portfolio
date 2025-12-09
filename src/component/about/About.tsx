@@ -1,8 +1,8 @@
 import HTwoText from "@/component/text/HTwoText";
 import PText from "@/component/text/PText";
 import Image from "next/image";
-import Button from "../button/Button";
 import Link from "next/link";
+import LinkButton from "../button/LinkButton";
 
 type AboutProps = {
   src: string;
@@ -44,9 +44,9 @@ export default function About({
                 <PText className="font-bold mb-4">{career}</PText>
               </div>
             </div>
-            <Button>
-              <Link href="/../about/">もっと見る</Link>
-            </Button>
+            <div className="flex justify-center items-center mt-16">
+              <LinkButton url="/../about/">もっとみる</LinkButton>
+            </div>
           </div>
         ) : (
           <div className="sm:max-w-2/3 p-8 mx-auto flex flex-col md:flex-row items-center gap-16 ">

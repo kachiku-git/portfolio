@@ -5,7 +5,7 @@ import PText from "@/component/text/PText";
 import Skills from "@/component/skills/Skills";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/component/button/Button";
+import LinkButton from "../../../component/button/LinkButton";
 
 export default function PrefecturesGamePage() {
   return (
@@ -22,6 +22,30 @@ export default function PrefecturesGamePage() {
           height={800}
         />
         <div className="max-w-4xl mx-auto">
+          <div className="w-full sm:w-2/4 mx-auto h-auto flex flex-row justify-center items-centers my-8 sm:my-16 gap-4">
+            <LinkButton
+              url="https://github.com/kachiku-git/Prefectures-game"
+              className="flex items-center justify-center cursor-pointer"
+            >
+              <Image
+                className="mr-2"
+                src="/img/github.png"
+                alt="githubのアイコン"
+                width={25}
+                height={25}
+              ></Image>
+              GitHub
+            </LinkButton>
+            <LinkButton
+              url="https://intp.site/2862/Prefecters_game/"
+              className="flex items-center justify-center cursor-pointer"
+            >
+              <span className="material-symbols-outlined mr-2">
+                desktop_windows
+              </span>
+              WebSite
+            </LinkButton>
+          </div>
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-4 sm:mb-8">
               この作品の概要
@@ -121,9 +145,9 @@ export default function PrefecturesGamePage() {
           />
         </div>
       </div>
-      <Button>
-        <Link href="/../works/">Works一覧へ</Link>
-      </Button>
+      <div className="flex justify-center items-center mt-16">
+        <LinkButton url="/../works/">Works一覧へ</LinkButton>
+      </div>
     </article>
   );
 }

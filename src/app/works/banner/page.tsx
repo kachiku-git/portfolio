@@ -5,7 +5,7 @@ import PText from "@/component/text/PText";
 import Skills from "@/component/skills/Skills";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/component/button/Button";
+import LinkButton from "../../../component/button/LinkButton";
 
 export default function BannerPage() {
   return (
@@ -14,7 +14,6 @@ export default function BannerPage() {
         <HTwoText className="mb-8 pb-2 sm:pb-4 sm:mb-16 border-b-3 border-black dark:border-white">
           バナー制作
         </HTwoText>
-
         <Image
           className="mx-auto mb-8 sm:mb-16 rounded-2xl"
           src="/img/works05.png"
@@ -22,8 +21,18 @@ export default function BannerPage() {
           width={800}
           height={800}
         />
-
         <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center items-center my-8 sm:my-16 ">
+            <LinkButton
+              url="https://intp.site/2862/bnr/"
+              className="flex items-center justify-center cursor-pointer"
+            >
+              <span className="material-symbols-outlined mr-2">
+                desktop_windows
+              </span>
+              WebSite
+            </LinkButton>
+          </div>
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-4 sm:mb-8">
               この作品の概要
@@ -53,24 +62,18 @@ export default function BannerPage() {
               </Link>
             </PText>
           </div>
-
-          {/* 担当 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               担当
             </HThreeText>
             <PText>デザイン・コーディング</PText>
           </div>
-
-          {/* 作成期間 */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               サイト作成期間
             </HThreeText>
             <PText>1日</PText>
           </div>
-
-          {/* デザインについて */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               デザインについて
@@ -83,8 +86,6 @@ export default function BannerPage() {
               模写では実際に自分で手を動かすことで、各ツールの使い方やデザインの基本原則を理解することができました。
             </PText>
           </div>
-
-          {/* コーディングに関して */}
           <div className="mb-4 sm:mb-8">
             <HThreeText className="border-l-3 pl-2 mb-2 sm:mb-4">
               コーディングに関して
@@ -95,8 +96,6 @@ export default function BannerPage() {
               またインターセクションオブザーバーを利用して、スクロールに応じてバナーがフェードインするような動きをつけました。
             </PText>
           </div>
-
-          {/* 使用スキル */}
           <Skills
             title="使用スキル"
             items={[
@@ -107,7 +106,7 @@ export default function BannerPage() {
               },
               {
                 skillsName: "CSS3",
-                src: "/img/css3.svg", // プロジェクトの実ファイル名に合わせてね
+                src: "/img/css3.svg",
                 alt: "CSS3の画像",
               },
               {
@@ -129,10 +128,9 @@ export default function BannerPage() {
           />
         </div>
       </div>
-
-      <Button>
-        <Link href="/works">Works一覧へ</Link>
-      </Button>
+      <div className="flex justify-center items-center mt-16">
+        <LinkButton url="/../works/">Works一覧へ</LinkButton>
+      </div>
     </article>
   );
 }
