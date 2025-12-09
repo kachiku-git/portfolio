@@ -11,7 +11,7 @@ export default function BannerPage() {
   return (
     <article>
       <div className="p-4 sm:p-8">
-        <HTwoText className="mb-8 pb-2 sm:pb-4 sm:mb-16 border-b-3 border-black dark:border-white">
+        <HTwoText className="text-3xl my-8 pb-2 sm:pb-4 border-b-3 border-black dark:border-white">
           バナー制作
         </HTwoText>
         <Image
@@ -28,7 +28,7 @@ export default function BannerPage() {
               className="flex items-center justify-center cursor-pointer"
             >
               <span className="material-symbols-outlined mr-2">
-                desktop_windows
+                open_in_new
               </span>
               WebSite
             </LinkButton>
@@ -53,12 +53,6 @@ export default function BannerPage() {
                 rel="noopener"
               >
                 https://intp.site/2862/bnr/
-              </Link>
-            </PText>
-            <PText>
-              GitHub：
-              <Link href="#" target="_blank" rel="noopener">
-                #
               </Link>
             </PText>
           </div>
@@ -129,7 +123,17 @@ export default function BannerPage() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-16">
-        <LinkButton url="/../works/">Works一覧へ</LinkButton>
+        <Link
+          href="/../works/"
+          className="flex justify-center items-center mx-auto p-4 rounded-4xl
+                font-bold text-white  bg-amber-400 dark:bg-green-500 dark:border-white 
+                hover:opacity-80 hover:scale-125 transition-all  duration-300"
+        >
+          <span className="material-symbols-outlined mr-2">
+            desktop_windows
+          </span>
+          Works一覧へ
+        </Link>
       </div>
     </article>
   );

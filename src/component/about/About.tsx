@@ -24,7 +24,7 @@ export default function About({
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 my-20 ">
       <div className="p-4 sm:p-8 border-3 rounded-2xl">
-        <HTwoText className="text-3xl font-bold text-center my-8">
+        <HTwoText className="text-4xl font-bold text-center my-8">
           ABOUT
         </HTwoText>
         {isTop ? (
@@ -45,7 +45,15 @@ export default function About({
               </div>
             </div>
             <div className="flex justify-center items-center mt-16">
-              <LinkButton url="/../about/">もっとみる</LinkButton>
+              <Link
+                href="/../about/"
+                className="flex justify-center items-center mx-auto p-4 rounded-4xl
+                font-bold text-white  bg-amber-400 dark:bg-green-500 dark:border-white 
+                hover:opacity-80 hover:scale-125 transition-all  duration-300"
+              >
+                <span className="material-symbols-outlined mr-2">person</span>
+                詳しくみてみる
+              </Link>
             </div>
           </div>
         ) : (

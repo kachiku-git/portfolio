@@ -12,7 +12,7 @@ export default function GorillaStoryPage() {
   return (
     <article>
       <div className="p-4 sm:p-8">
-        <HTwoText className="mb-8 pb-2 sm:pb-4 sm:mb-16 border-b-3 border-black dark:border-white">
+        <HTwoText className="text-3xl my-8 pb-2 sm:pb-4 border-b-3 border-black dark:border-white">
           ゴリラ物語
         </HTwoText>
         <Image
@@ -30,7 +30,7 @@ export default function GorillaStoryPage() {
             >
               <Image
                 className="mr-2"
-                src="/img/github.png"
+                src="/img/github-white.png"
                 alt="githubのアイコン"
                 width={25}
                 height={25}
@@ -42,7 +42,7 @@ export default function GorillaStoryPage() {
               className="flex items-center justify-center cursor-pointer"
             >
               <span className="material-symbols-outlined mr-2">
-                desktop_windows
+                open_in_new
               </span>
               WebSite
             </LinkButton>
@@ -139,7 +139,17 @@ export default function GorillaStoryPage() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-16">
-        <LinkButton url="/../works/">Works一覧へ</LinkButton>
+        <Link
+          href="/../works/"
+          className="flex justify-center items-center mx-auto p-4 rounded-4xl
+                font-bold text-white  bg-amber-400 dark:bg-green-500 dark:border-white 
+                hover:opacity-80 hover:scale-125 transition-all  duration-300"
+        >
+          <span className="material-symbols-outlined mr-2">
+            desktop_windows
+          </span>
+          Works一覧へ
+        </Link>
       </div>
     </article>
   );
