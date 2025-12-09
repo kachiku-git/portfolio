@@ -110,12 +110,12 @@ export default function BannerPage() {
               },
               {
                 skillsName: "Illustrator",
-                src: "/img/illustrator.svg",
+                src: "/img/Illustrator.svg",
                 alt: "Illustratorの画像",
               },
               {
                 skillsName: "Photoshop",
-                src: "/img/photoshop.svg",
+                src: "/img/Photoshop.svg",
                 alt: "Photoshopの画像",
               },
             ]}

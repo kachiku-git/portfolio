@@ -242,7 +242,7 @@ export default function sundayFlowerPage() {
               },
               {
                 skillsName: "illustrator",
-                src: "/img/illustrator.svg",
+                src: "/img/Illustrator.svg",
                 alt: "illustratorの画像",
               },
               {
