@@ -16,14 +16,17 @@ const ScrollFadeIn = ({ children, className }: ScrollFadeInProps) => {
 
   useLayoutEffect(() => {
     const targetRef = targetDevRef.current;
-    if (!targetDevRef.current) return;
+    if (!targetRef) return;
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
+        // 初期値
         targetRef,
         {
           opacity: 0,
           y: 40,
         },
+        // アニメーション終了時
         {
           opacity: 1,
           y: 0,
@@ -31,15 +34,25 @@ const ScrollFadeIn = ({ children, className }: ScrollFadeInProps) => {
           ease: "power4.inOut",
           scrollTrigger: {
             trigger: targetRef,
-            start: "top 95%", // 要素のtopが画面の80%位置に来たら発火
+            start: "top 100%", // 要素のtopが画面の位置に来たら発火
+            scroller: document.querySelector(".scroll-container"),
             toggleActions: "play none none none",
             // ↑ 画面入: play / 再入: none / 表示してから離れる　leave: none / もう一回するか？ back: reverse
           },
         }
       );
     }, targetRef);
-    // アンマウント時に破棄
-    return () => ctx.revert();
+    // レイアウト確定後にスクロールトリガーを更新
+    ScrollTrigger.refresh();
+
+    // 保険としてロードイベントでも再計算
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", onLoad);
+
+    return () => {
+      window.removeEventListener("load", onLoad);
+      ctx.revert();
+    };
   }, []);
 
   return (

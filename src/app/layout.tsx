@@ -53,7 +53,7 @@ export default function RootLayout({
             <aside className="sm:p-4 sm:h-screen sm:sticky sm:top-0">
               <Header className="p-2 sm:p-0 sm:min-h-2/3 sm:border-y-3 dark:border-whiter-3 rounded-4xl" />
             </aside>
-            <div className="flex flex-col sm:h-screen sm:overflow-y-auto">
+            <div className="scroll-container flex flex-col sm:h-screen sm:overflow-y-auto">
               <main className="flex-1">{children}</main>
               <Footer className="my-8 sm:mt-16 " />
             </div>

@@ -18,7 +18,7 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 my-20">
       <ScrollFadeIn>
-        <div className="about-hero flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="shrink-0">
             <Image
               src={src}
@@ -28,12 +28,12 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
               className="rounded-2xl object-cover"
             />
           </div>
-          <div className="about-hero-text">
+          <div>
             <HTwoText className="text-3xl sm:text-4xl font-bold mb-2">
               Keita Fujiwara
             </HTwoText>
             <PText className="font-bold mb-2 text-amber-500 dark:text-green-400">
-              フロントエンドエンジニア志望のポンコツです
+              フロントエンドエンジニア志望
             </PText>
             <PText className="mb-2">岡山県出身。</PText>
             <PText>「納得できるものを、届ける」が仕事のスタンスです。</PText>
@@ -42,12 +42,12 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
       </ScrollFadeIn>
 
       {/* ===== TIMELINE ===== */}
-      <section className="timeline-section mt-20">
+      <section className="mt-20">
         <HThreeText className="font-bold mb-8">こんな人生でした</HThreeText>
         <div className="relative border-l-2 border-amber-400 dark:border-green-400 pl-6 space-y-8">
           {/* 1 */}
           <ScrollFadeIn>
-            <div className="timeline-item">
+            <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-block w-3 h-3 rounded-full bg-amber-400 dark:bg-green-400" />
                 <PText className="text-xs sm:text-sm font-bold text-gray-500">
@@ -64,7 +64,7 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
 
           {/* 2 */}
           <ScrollFadeIn>
-            <div className="timeline-item">
+            <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-block w-3 h-3 rounded-full bg-amber-400 dark:bg-green-400" />
                 <PText className="text-xs sm:text-sm font-bold text-gray-500">
@@ -83,7 +83,7 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
 
           {/* 3 */}
           <ScrollFadeIn>
-            <div className="timeline-item">
+            <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-block w-3 h-3 rounded-full bg-amber-400 dark:bg-green-400" />
                 <PText className="text-xs sm:text-sm font-bold text-gray-500">
@@ -103,7 +103,7 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
 
           {/* 4 */}
           <ScrollFadeIn>
-            <div className="timeline-item">
+            <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-block w-3 h-3 rounded-full bg-amber-400 dark:bg-green-400" />
                 <PText className="text-xs sm:text-sm font-bold text-gray-500">
@@ -124,7 +124,7 @@ export default function PageAbout({ src, alt }: PageAboutProps) {
 
           {/* 5 */}
           <ScrollFadeIn>
-            <div className="timeline-item">
+            <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="inline-block w-3 h-3 rounded-full bg-amber-400 dark:bg-green-400" />
                 <PText className="text-xs sm:text-sm font-bold text-gray-500">

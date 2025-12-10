@@ -1,5 +1,4 @@
-"use client";
-import React from "react";
+import dynamic from "next/dynamic";
 import HTwoText from "@/component/text/HTwoText";
 import TopAbout from "./TopAbout";
 import PageAbout from "./PageAbout";
