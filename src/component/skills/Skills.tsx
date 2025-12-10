@@ -1,9 +1,6 @@
-import React from "react";
-import Icon from "@/component/icon/Icon";
-import PText from "@/component/text/PText";
 import HTwoText from "@/component/text/HTwoText";
-import HThreeText from "@/component/text/HThreeText";
 import IconSkills from "./IconSkills";
+import Link from "next/link";
 
 type SkillsProps = {
   items: SkillsItems[];
@@ -20,8 +17,8 @@ type SkillsItems = {
 export default function Skills({ items, title }: SkillsProps) {
   return (
     <section>
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-12`}>
-        <HTwoText className="my-8">{title}</HTwoText>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 my-20">
+        <HTwoText className="text-3xl font-bold">{title}</HTwoText>
         <IconSkills items={items}></IconSkills>
       </div>
     </section>

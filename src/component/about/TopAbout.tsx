@@ -35,7 +35,7 @@ export default function TopAbout({
           <PText className="font-bold mb-4">{career}</PText>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-16">
+      <div className="flex justify-center items-center mt-4 sm:mt-8">
         <Link
           href="/about"
           className="flex justify-center items-center mx-auto p-4 rounded-4xl

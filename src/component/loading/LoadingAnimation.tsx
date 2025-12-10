@@ -42,7 +42,7 @@ export default function LoadingAnimation({ onFinish }: Props) {
       timeline.from(logoRef.current, {
         autoAlpha: 0,
         y: 20,
-        duration: 0.5,
+        duration: 0.7,
       });
 
       // ② ロゴが左にスライドしながら少し小さくなる
@@ -59,9 +59,9 @@ export default function LoadingAnimation({ onFinish }: Props) {
           {
             autoAlpha: 0,
             x: 10,
-            duration: 0.3,
+            duration: 0.5,
           },
-          "-=0.3" // ロゴ移動と少しだけかぶせる
+          "-=0.5" // ロゴ移動と少しだけかぶせる
         );
       }
 
@@ -73,7 +73,7 @@ export default function LoadingAnimation({ onFinish }: Props) {
           duration: 0.7,
           ease: "none", // タイプ感を出すなら等速のほうがそれっぽい
         },
-        "-=0.1"
+        "-=0.3"
       );
 
       // ⑤ ロゴ＋名前セットを「ヘッダー方向」に吸い込む

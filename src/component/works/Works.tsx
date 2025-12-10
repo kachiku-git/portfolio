@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
+import Link from "next/link";
 
 type WorksProps = {
   items: WorksItems[];
@@ -48,7 +49,7 @@ export default function Works({
   return (
     <section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 my-20">
-        <HTwoText className="text-3xl font-bold">{title}</HTwoText>
+        <HTwoText className="text-4xl font-bold">{title}</HTwoText>
 
         {isSwiper ? (
           <Swiper
@@ -95,27 +96,42 @@ export default function Works({
             ))}
           </Swiper>
         ) : (
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 my-8">
-            {items.map((item) => (
-              <a
-                key={item.src}
-                className="flex flex-col items-center border-3 border-black dark:border-white rounded-tl-4xl shadow-xl p-4 transition-transform duration-300 hover:scale-[1.05]"
-                href={`/works/${item.href}/`}
+          <>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 py-8 my-8">
+              {items.map((item) => (
+                <a
+                  key={item.src}
+                  className="flex flex-col items-center border-3 border-black dark:border-white rounded-tl-4xl shadow-xl p-4 transition-transform duration-300 hover:scale-[1.05]"
+                  href={`/works/${item.href}/`}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={400}
+                    height={300}
+                    className="rounded"
+                  />
+                  <p className="mt-4 text-lg font-semibold">{item.worksName}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">
+                    {item.worksInfo}
+                  </p>
+                </a>
+              ))}
+            </div>
+            <div className="flex justify-center items-center">
+              <Link
+                href="/skills"
+                className="flex justify-center items-center mx-auto p-4 rounded-4xl
+         font-bold text-white  bg-amber-400 dark:bg-green-500 dark:border-white 
+         hover:opacity-80 hover:scale-125 transition-all  duration-300"
               >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={400}
-                  height={300}
-                  className="rounded"
-                />
-                <p className="mt-4 text-lg font-semibold">{item.worksName}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-300">
-                  {item.worksInfo}
-                </p>
-              </a>
-            ))}
-          </div>
+                <span className="material-symbols-outlined mr-2">
+                  auto_stories
+                </span>
+                Skill一覧へ
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </section>

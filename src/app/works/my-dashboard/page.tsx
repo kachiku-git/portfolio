@@ -13,7 +13,7 @@ export default function MyDashboardPage() {
     <article>
       <div className="p-4 sm:p-8">
         <div className="w-full h-auto pb-4 md:pb-0 md:px-8 my-8 md:flex md:flex-rew md:items-center md:justify-around  border-b-3 border-black dark:border-white">
-          <HTwoText className="w-full text-3xl">Sunday Flower</HTwoText>
+          <HTwoText className="w-full text-4xl">MY Dashboard</HTwoText>
           <IconSkills
             className="hidden sm:flex w-full h-auto scale-75"
             items={[
@@ -58,7 +58,7 @@ export default function MyDashboardPage() {
               GitHub
             </LinkButton>
             <LinkButton
-              url="https://intp.site/2862/my-Dashboard/"
+              url="https://my-dashboard-five-blush.vercel.app/"
               className="flex items-center justify-center cursor-pointer"
             >
               <span className="material-symbols-outlined mr-2">
@@ -87,7 +87,7 @@ export default function MyDashboardPage() {
             <PText>
               サイトURL：
               <Link
-                href="https://intp.site/2862/my-Dashboard/"
+                href="https://my-dashboard-five-blush.vercel.app/"
                 target="_blank"
                 rel="noopener"
               >

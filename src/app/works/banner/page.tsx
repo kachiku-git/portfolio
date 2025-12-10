@@ -13,7 +13,7 @@ export default function BannerPage() {
     <article>
       <div className="p-4 sm:p-8">
         <div className="w-full h-auto pb-4 md:pb-0 md:px-8 my-8 md:flex md:flex-rew md:items-center md:justify-around  border-b-3 border-black dark:border-white">
-          <HTwoText className="w-full text-3xl">Sunday Flower</HTwoText>
+          <HTwoText className="w-full text-4xl">バナー作品</HTwoText>
           <IconSkills
             className="hidden sm:flex w-full h-auto scale-75"
             items={[

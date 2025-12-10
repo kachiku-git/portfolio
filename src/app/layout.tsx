@@ -17,11 +17,39 @@ const geistMono = Geist_Mono({
 
 // 後でSEO対策を考慮して修正する
 export const metadata: Metadata = {
-  title: "K.Fujiwara Portfolio",
+  metadataBase: new URL("https://portfolio-three-tau-44.vercel.app/"), // ★本番のURLに変更する
+  title: {
+    default: "K.Fujiwara Portfolio",
+    template: "%s | K.Fujiwara Portfolio",
+  },
   description:
     "K.Fujiwaraのポートフォリオサイトです。主にフロントエンド開発を中心に活動しております。",
   icons: {
-    icon: [{ url: "/img/logo.svg", type: "image/x-icon" }],
+    icon: [{ url: "/img/logo.svg", type: "image/svg+xml" }],
+  },
+  openGraph: {
+    title: "K.Fujiwara Portfolio",
+    description:
+      "K.Fujiwaraのポートフォリオサイトです。主にフロントエンド開発を中心に活動しております。",
+    url: "/",
+    siteName: "K.Fujiwara Portfolio",
+    images: [
+      {
+        url: "/img/ogp.jpg",
+        width: 1200,
+        height: 630,
+        alt: "K.Fujiwara Portfolio OGP Image",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "K.Fujiwara Portfolio",
+    description:
+      "K.Fujiwaraのポートフォリオサイトです。主にフロントエンド開発を中心に活動しております。",
+    images: ["/img/ogp.jpg"],
   },
 };
 
