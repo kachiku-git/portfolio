@@ -4,6 +4,7 @@ export default function AboutPage() {
   return (
     <>
       <About
+        isTop={false}
         src="/img/mp.JPG"
         alt="プロフィール画像"
         birthplace="岡山県"
