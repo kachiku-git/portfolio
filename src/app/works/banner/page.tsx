@@ -6,14 +6,45 @@ import Skills from "@/component/skills/Skills";
 import Image from "next/image";
 import Link from "next/link";
 import LinkButton from "../../../component/button/LinkButton";
+import IconSkills from "@/component/skills/IconSkills";
 
 export default function BannerPage() {
   return (
     <article>
       <div className="p-4 sm:p-8">
-        <HTwoText className="text-3xl my-8 pb-2 sm:pb-4 border-b-3 border-black dark:border-white">
-          バナー制作
-        </HTwoText>
+        <div className="w-full h-auto pb-4 md:pb-0 md:px-8 my-8 md:flex md:flex-rew md:items-center md:justify-around  border-b-3 border-black dark:border-white">
+          <HTwoText className="w-full text-3xl">Sunday Flower</HTwoText>
+          <IconSkills
+            className="hidden sm:flex w-full h-auto scale-75"
+            items={[
+              {
+                skillsName: "HTML5",
+                src: "/img/html5.svg",
+                alt: "HTML5の画像",
+              },
+              {
+                skillsName: "CSS3",
+                src: "/img/css3.svg",
+                alt: "CSS3の画像",
+              },
+              {
+                skillsName: "JavaScript",
+                src: "/img/js.svg",
+                alt: "JavaScriptの画像",
+              },
+              {
+                skillsName: "Illustrator",
+                src: "/img/Illustrator.svg",
+                alt: "Illustratorの画像",
+              },
+              {
+                skillsName: "Photoshop",
+                src: "/img/Photoshop.svg",
+                alt: "Photoshopの画像",
+              },
+            ]}
+          />
+        </div>
         <Image
           className="mx-auto mb-8 sm:mb-16 rounded-2xl"
           src="/img/works05.png"
