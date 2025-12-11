@@ -40,7 +40,7 @@ export default function Contact({ isTop = false }: ContactProps) {
                 </Link>
                 <Link
                   className="block p-4 sm:p-8 hover:opacity-80 hover:scale-125 transition-all  duration-300 rounded-full text-white  dark:bg-amber-400 bg-green-500 dark:border-white"
-                  href="mailto:fuji0syaru0@gmail.com"
+                  href="mailto:fuji0syaru0@gmail.com?subject=portfolioからの問い合わせ&body=ポートフォリオを見て連絡しました。%0D%0A お問い合わせ内容 :%0D%0A"
                   target="_blank"
                   rel="noopener"
                 >
@@ -74,7 +74,7 @@ export default function Contact({ isTop = false }: ContactProps) {
               <div className="flex md:flex-row justify-center items-center mx-auto text-center gap-8">
                 <Link
                   className="block p-4 sm:p-8 hover:opacity-80 hover:scale-125 transition-all  duration-300 font-bold rounded-full text-white  dark:bg-amber-400 bg-green-500 dark:border-white "
-                  href="https://github.com/kachiku-git"
+                  href="mailto:fuji0syaru0@gmail.com?subject=portfolioからの問い合わせ&body=ポートフォリオを見て連絡しました。%0D%0Aお問い合わせ内容を入力してください :%0D%0A"
                   target="_blank"
                   rel="noopener"
                 >
